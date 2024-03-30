@@ -16,7 +16,7 @@
       gap: 30px;
 
       h1{
-          font-size: 50px;
+          font-size: 45px;
 
           i{
               font-weight: 300;
@@ -29,6 +29,7 @@
           justify-content: space-between;
           background-color: white;
           border-radius: 5px;
+          overflow: hidden;
 
           .searchInput{
               display: flex;
@@ -46,6 +47,10 @@
                   border: none;
                   outline: none;
 
+                  &::placeholder {
+                    color: gray;
+                  }
+
               }
 
           }
@@ -55,7 +60,10 @@
               border: none;
               background-color: #1dbf73;
               color: white;
+              align-self: flex-end;
               cursor: pointer;
+
+              
            
           }
       }
@@ -63,8 +71,11 @@
           display: flex;
           align-items: center;
           gap: 10px;
-          span{}
+          span{
+            width: max-content;
+          }
           button{
+            width: max-content;
               color: white;
               background-color: transparent;
               border: 1px solid white;
@@ -72,6 +83,12 @@
               border-radius: 20px;
               font-size: 14px;
               cursor: pointer;
+
+              &:hover{
+                background-color: white;
+                color: #1dbf73;
+                border: 1px solid #1dbf73;
+              }
           }
       }
      }
@@ -81,6 +98,7 @@
       img{
           height: 100%;
           object-fit: contain;
+          
 
            
       }
