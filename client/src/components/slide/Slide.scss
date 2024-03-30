@@ -24,7 +24,15 @@
     margin: auto;
   }
 
-  .carousel-prev {
+  .carousel-prev
+  {
     left: -25px;
   }
+
+  .carousel-next
+  {
+    right: -25px;
+  }
+
+
 }
