@@ -1,7 +1,27 @@
-import express from "express"
+import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv"
 
-const app = express()
+const app = express();
+dotenv.config();
+
+mongoose.set('strictQuery', true)
+
+const connect = async () => {
+
+  try {
+    await mongoose.connect(process.env.MONGO)  
+    console.log("Connected to MongoDB!");
+  } catch (error) {
+    console.log(error);
+    
+  }
+}
+
 
 app.listen(8800, () => {
-    console.log("backend server is running!");
-})
+  connect()
+  console.log("Backend server is running!");
+});
+
+
